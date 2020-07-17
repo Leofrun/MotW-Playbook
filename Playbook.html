@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
         <title>Playbook</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
 
             textarea#character_name {
@@ -20,6 +23,7 @@
                 width: 100%;
                 resize: vertical;
             }
+
         </style>
     </head>
     <body>
@@ -139,5 +143,37 @@
           <textarea id="players_mission" style="background-color: #ededed;" size="150">Type your mission here</textarea>
         </div>
         <!-- End Mission -->
+
+        <!-- Moves -->
+        <div class="container">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#moves">Moves</a></li>
+            <li><a data-toggle="tab" href="#gear">Gear</a></li>
+            <li><a data-toggle="tab" href="#history">History</a></li>
+            <!-- <li><a data-toggle="tab" href="#menu3">Menu 3</a></li> -->
+          </ul>
+
+          <div class="tab-content">
+            <div id="moves" class="tab-pane fade in active">
+              <h4>Moves</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div id="gear" class="tab-pane fade">
+              <h4>Gear</h4>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="history" class="tab-pane fade">
+              <h4>History</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <!-- <div id="menu3" class="tab-pane fade">
+              <h4>Menu 3</h4>
+              <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div> -->
+          </div>
+
+        </div>
+        </div>
+        <!-- End Moves -->
     </body>
 </html>
