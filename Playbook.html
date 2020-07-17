@@ -12,7 +12,7 @@
             textarea#character_name {
                 border: 1 solid;
                 padding: 10px;
-                width: 45.5%;
+                width: 45.75%;
                 resize: vertical;
                 overflow: auto;
             }
@@ -35,7 +35,7 @@
                     <div class="row">
                         <!-- Opening Text -->
                         <div class="col-sm-12">
-                            <p style="text-align: left;">To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and gear. Finally, introduce yourself and pick history.</p>
+                            <p style="text-align: left;">To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.</p>
                         </div>
                     </div>
                     <div class="row">
@@ -67,6 +67,19 @@
             </div>
         </div>
         <!-- End Top Half -->
+
+        <!-- Mission -->
+        <div class="container">
+          <h4>Mission</h4>
+          <textarea id="players_mission" style="background-color: #ededed;">Type your mission here</textarea>
+        </div>
+        <!-- End Mission -->
+
+        <hr>
+
+        <div class="container">
+          <h4>Stats</h4>
+        </div>
 
         <!-- Rating Score Container -->
         <div class="container">
@@ -137,18 +150,13 @@
         </div>
         <!-- End Rating Score Container -->
 
-        <!-- Mission -->
-        <div class="container">
-          <h4>Mission</h4>
-          <textarea id="players_mission" style="background-color: #ededed;" size="150">Type your mission here</textarea>
-        </div>
-        <!-- End Mission -->
+        <hr>
 
         <!-- Moves -->
         <div class="container">
           <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#moves">Moves</a></li>
-            <li><a data-toggle="tab" href="#gear">Gear</a></li>
+            <li><a data-toggle="tab" href="#weapons">Weapons</a></li>
             <li><a data-toggle="tab" href="#history">History</a></li>
             <!-- <li><a data-toggle="tab" href="#menu3">Menu 3</a></li> -->
           </ul>
@@ -156,11 +164,13 @@
           <div class="tab-content">
             <div id="moves" class="tab-pane fade in active">
               <h4>Moves</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>You get all the basic moves, and pick three of your classes moves.</p>
+              <textarea id="players_mission" style="background-color: #ededed;">Type your moves here</textarea>
             </div>
-            <div id="gear" class="tab-pane fade">
-              <h4>Gear</h4>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div id="weapons" class="tab-pane fade">
+              <h4>Weapons</h4>
+              <p>List your weapons in the text field below. Try to follow formatting as:<br /><code>weapon name, amount of harm, damage type</code></p>
+              <textarea id="players_mission" style="background-color: #ededed;">Type your wepons here</textarea>
             </div>
             <div id="history" class="tab-pane fade">
               <h4>History</h4>
