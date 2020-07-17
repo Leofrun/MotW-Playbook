@@ -3,12 +3,11 @@
     <head>
         <title>Playbook</title>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
-
             textarea#character_name {
                 border: 1 solid;
                 padding: 10px;
@@ -23,201 +22,202 @@
                 width: 100%;
                 resize: vertical;
             }
-
         </style>
     </head>
     <body>
-        <!-- Top Half -->
+<!-- Top Half -->
         <div class="container">
             <div class="row">
-                <!-- Left -->
+            <!-- Left -->
 
                 <!-- Opening Text -->
                 <div class="col-sm-6">
-                      <p style="text-align: left; margin: 50px">To make your character, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.</p>
-                  </div>
+                    <p style="text-align: left; margin: 50px;">
+                        To make your character, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.
+                    </p>
+                </div>
                 <!-- End Opening Text -->
 
-                <!-- End Left -->
+            <!-- End Left -->
 
-                <!-- Right -->
+            <!-- Right -->
 
                 <!-- Opening Input -->
                 <div class="col-sm-6">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h4>Name:</h4>
-                        <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
-                      </div>
-                      <div class="col-sm-12">
-                        <h4>Look:</h4>
-                        <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
-                      </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Name:</h4>
+                                <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
+                            </div>
+                            <div class="col-sm-12">
+                                <h4>Look:</h4>
+                                <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <!-- End Opening Input -->
 
-                <!-- End Right -->
+            <!-- End Right -->
             </div>
         </div>
 
-        <!-- Stats -->
+        <!-- Dynamic Tabs Top -->
         <div class="container">
-          <h4>Stats</h4>
-          <br>
-          <!-- Dynamic Tabs Top -->
-          <div class="container">
             <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#luck">Luck</a></li>
-              <li><a data-toggle="tab" href="#harm">Harm</a></li>
-              <li><a data-toggle="tab" href="#leveling-up">Leveling Up</a></li>
+                <li class="active"><a data-toggle="tab" href="#luck">Luck</a></li>
+                <li><a data-toggle="tab" href="#harm">Harm</a></li>
+                <li><a data-toggle="tab" href="#leveling-up">Leveling Up</a></li>
             </ul>
 
             <div class="tab-content">
-              <div id="luck" class="tab-pane fade in active">
-                <h4>Luck</h4>
-                <p>You can mark off a Luck box to either change a roll you just made to a 12, as if you had rolled that; or change a wound you
-have just taken to count as just 0-harm. If your Luck boxes all get filled, you've run out of good luck.</p>
-              </div>
-              <div id="harm" class="tab-pane fade">
-                <h4>Harm</h4>
-                <p>When you suffer harm, mark of the number of boxes equal to harm suffered. When you reach four harm, tick “Unstable”.</p>
-              </div>
-              <div id="leveling-up" class="tab-pane fade">
-                <h4>Leveling Up</h4>
-                <p>Whenever you roll a highlighted rating, or a move tells you to, mark an experience box.
-When you have filled all five experience boxes, you level up. Erase the marks and pick an improvement from the list below.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Dynamic Tabs Top -->
-
-        </div>
-        <!-- End Stats -->
-
-        <!-- End Top Half -->
-
-        <hr>
-
-        <!-- Rating -->
-        <div class="container">
-          <h3>Rating</h3>
-          <p>Change fields below based on rating you chose from Playbook.</p>
-        </div>
-        <!-- End Rating -->
-
-        <!-- Rating Score Container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Begin Rating Score -->
-                      <!-- <form action="/action_page.php"> -->
-                    <form class="form-inline" action="">
-                        <!-- Charm Value -->
-                        <label for="charm">Charm:</label>
-                        <select id="charm" name="charm">
-                            <option value="plus">+</option>
-                            <option value="minus">-</option>
-                            <option value="equals-zero"> </option>
-                        </select>
-                        <input type="text" id="charm-value" name="charm-value" size="2" />
-                          <!-- <input type="submit" value="Submit"> -->
-                        <!-- End Charm -->
-
-                        <!-- Cool Value -->
-                        <label for="cool">Cool:</label>
-                        <select id="cool" name="cool">
-                            <option value="plus">+</option>
-                            <option value="minus">-</option>
-                            <option value="equals-zero"> </option>
-                        </select>
-                        <input type="text" id="cool-value" name="cool-value" size="2" />
-                          <!-- <input type="submit" value="Submit"> -->
-                        <!-- End Cool Value -->
-
-                        <!-- Sharp Value -->
-                        <label for="sharp">Sharp:</label>
-                        <select id="sharp" name="sharp">
-                            <option value="plus">+</option>
-                            <option value="minus">-</option>
-                            <option value="equals-zero"> </option>
-                        </select>
-                        <input type="text" id="sharp-value" name="sharp-value" size="2" />
-                          <!-- <input type="submit" value="Submit" /> -->
-                        <!-- End Sharp Value -->
-
-                        <!-- Tough Value -->
-                        <label for="tough">Tough:</label>
-                        <select id="tough" name="tough">
-                            <option value="plus">+</option>
-                            <option value="minus">-</option>
-                            <option value="equals-zero"> </option>
-                        </select>
-                        <input type="text" id="tough-value" name="tough-value" size="2" />
-                          <!-- <input type="submit" value="Submit"> -->
-                        <!-- End Tough Value -->
-
-                        <!-- Weird Value -->
-                        <label for="weird">Weird:</label>
-                        <select id="weird" name="weird">
-                            <option value="plus">+</option>
-                            <option value="minus">-</option>
-                            <option value="equals-zero"> </option>
-                        </select>
-                        <input type="text" id="weird-value" name="weird-value" size="2" />
-                          <!-- <input type="submit" value="Submit"> -->
-                        <!-- End Weird Value -->
-                        <!-- End Weird Value -->
-                    </form>
-                    <!-- End Rating Score -->
+                <div id="luck" class="tab-pane fade in active">
+                    <h4>Luck</h4>
+                    <p>
+                        You can mark off a Luck box to either change a roll you just made to a 12, as if you had rolled that; or change a wound you have just taken to count as just 0-harm. If your Luck boxes all get filled, you've run out
+                        of good luck.
+                    </p>
+                </div>
+                <div id="harm" class="tab-pane fade">
+                    <h4>Harm</h4>
+                    <p>When you suffer harm, mark of the number of boxes equal to harm suffered. When you reach four harm, tick “Unstable”.</p>
+                </div>
+                <div id="leveling-up" class="tab-pane fade">
+                    <h4>Leveling Up</h4>
+                    <p>Whenever you roll a highlighted rating, or a move tells you to, mark an experience box. When you have filled all five experience boxes, you level up. Erase the marks and pick an improvement from the list below.</p>
                 </div>
             </div>
         </div>
-        <!-- End Rating Score Container -->
+        <!-- End Dynamic Tabs Top -->
 
-        <hr>
+<!-- End Top Half -->
+
+<!-- Bottom Half -->
+
+        <hr />
+
+        <!-- Rating -->
+        <div class="container">
+            <h3>Rating</h3>
+            <p>Change fields below based on rating you chose from Playbook.</p>
+            <!-- Rating Score Container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Begin Rating Score -->
+                        <!-- <form action="/action_page.php"> -->
+                        <form class="form-inline" action="">
+                            <!-- Charm Value -->
+                            <label for="charm">Charm:</label>
+                            <select id="charm" name="charm">
+                                <option value="plus">+</option>
+                                <option value="minus">-</option>
+                                <option value="equals-zero"> </option>
+                            </select>
+                            <input type="text" id="charm-value" name="charm-value" size="2" />
+                            <!-- <input type="submit" value="Submit"> -->
+                            <!-- End Charm -->
+
+                            <!-- Cool Value -->
+                            <label for="cool">Cool:</label>
+                            <select id="cool" name="cool">
+                                <option value="plus">+</option>
+                                <option value="minus">-</option>
+                                <option value="equals-zero"> </option>
+                            </select>
+                            <input type="text" id="cool-value" name="cool-value" size="2" />
+                            <!-- <input type="submit" value="Submit"> -->
+                            <!-- End Cool Value -->
+
+                            <!-- Sharp Value -->
+                            <label for="sharp">Sharp:</label>
+                            <select id="sharp" name="sharp">
+                                <option value="plus">+</option>
+                                <option value="minus">-</option>
+                                <option value="equals-zero"> </option>
+                            </select>
+                            <input type="text" id="sharp-value" name="sharp-value" size="2" />
+                            <!-- <input type="submit" value="Submit" /> -->
+                            <!-- End Sharp Value -->
+
+                            <!-- Tough Value -->
+                            <label for="tough">Tough:</label>
+                            <select id="tough" name="tough">
+                                <option value="plus">+</option>
+                                <option value="minus">-</option>
+                                <option value="equals-zero"> </option>
+                            </select>
+                            <input type="text" id="tough-value" name="tough-value" size="2" />
+                            <!-- <input type="submit" value="Submit"> -->
+                            <!-- End Tough Value -->
+
+                            <!-- Weird Value -->
+                            <label for="weird">Weird:</label>
+                            <select id="weird" name="weird">
+                                <option value="plus">+</option>
+                                <option value="minus">-</option>
+                                <option value="equals-zero"> </option>
+                            </select>
+                            <input type="text" id="weird-value" name="weird-value" size="2" />
+                            <!-- <input type="submit" value="Submit"> -->
+                            <!-- End Weird Value -->
+                            <!-- End Weird Value -->
+                        </form>
+                        <!-- End Rating Score -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Rating Score Container -->
+        </div>
+        <!-- End Rating -->
+
+        <hr />
 
         <!-- Mission -->
         <div class="container">
-          <h3>Mission</h3>
-          <textarea id="players_mission" style="background-color: #ededed;">Type your mission here</textarea>
+            <h3>Mission</h3>
+            <textarea id="players_mission" style="background-color: #ededed;">Type your mission here</textarea>
         </div>
         <!-- End Mission -->
 
-        <hr>
+        <hr />
 
         <!-- Dynamic Tabs Bottom -->
         <div class="container">
-          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#moves">Moves</a></li>
-            <li><a data-toggle="tab" href="#weapons">Weapons</a></li>
-            <li><a data-toggle="tab" href="#inventory">Inventory</a></li>
-            <li><a data-toggle="tab" href="#history">History</a></li>
-          </ul>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#moves">Moves</a></li>
+                <li><a data-toggle="tab" href="#weapons">Weapons</a></li>
+                <li><a data-toggle="tab" href="#inventory">Inventory</a></li>
+                <li><a data-toggle="tab" href="#history">History</a></li>
+            </ul>
 
-          <div class="tab-content">
-            <div id="moves" class="tab-pane fade in active">
-              <h3>Moves</h3>
-              <p>You get all the basic moves, and pick three of your classes moves.</p>
-              <textarea id="players_mission" style="background-color: #ededed;">Type your moves here</textarea>
+            <div class="tab-content">
+                <div id="moves" class="tab-pane fade in active">
+                    <h3>Moves</h3>
+                    <p>You get all the basic moves, and pick three of your classes moves.</p>
+                    <textarea id="players_mission" style="background-color: #ededed;">Type your moves here</textarea>
+                </div>
+                <div id="weapons" class="tab-pane fade">
+                    <h3>Weapons</h3>
+                    <p>
+                        List your weapons in the text field below. Try to follow formatting as:<br />
+                        <code>weapon name, amount of harm, damage type</code>
+                    </p>
+                    <textarea id="players_mission" style="background-color: #ededed;">Type your wepons here</textarea>
+                </div>
+                <div id="inventory" class="tab-pane fade">
+                    <h3>Inventory</h3>
+                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+                <div id="history" class="tab-pane fade">
+                    <h3>History</h3>
+                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
             </div>
-            <div id="weapons" class="tab-pane fade">
-              <h3>Weapons</h3>
-              <p>List your weapons in the text field below. Try to follow formatting as:<br /><code>weapon name, amount of harm, damage type</code></p>
-              <textarea id="players_mission" style="background-color: #ededed;">Type your wepons here</textarea>
-            </div>
-            <div id="inventory" class="tab-pane fade">
-              <h3>Inventory</h3>
-              <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div>
-            <div id="history" class="tab-pane fade">
-              <h3>History</h3>
-              <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div>
-          </div>
         </div>
         <!-- End Dynamic Tabs Bottom-->
+        <br />
+<!-- End Bottom Half -->
     </body>
 </html>
