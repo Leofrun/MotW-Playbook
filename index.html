@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <title>Playbook</title>
+        <style>
+            textarea#character_name {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- Left -->
+                <div class="col-sm-6">
+                    <div class="row">
+                        <!-- Opening Text -->
+                        <div class="<col-sm-12>">
+                            <p style="text-align: left;">To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and gear. Finally, introduce yourself and pick history.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Rating -->
+                        <div class="col-sm-12">
+                            <h4>Rating</h4>
+                            <p>Pick one from each line, and write under look on the right</p>
+                            <div>
+                                <input type="checkbox" id="rating_1" name="rating_1" /> Charm+1, Cool+1, Sharp-1, Tough+2, Weird=0
+                                <label for="rating_1"></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="rating_2" name="rating_2" /> Charm-1, Cool+2, Sharp-1, Tough+2, Weird=0
+                                <label for="rating_2"></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="rating_3" name="rating_3" /> Charm-1, Cool=0, Sharp+1, Tough+2, Weird+1
+                                <label for="rating_3"></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="rating_4" name="rating_4" /> Charm+1, Cool+1, Sharp=0, Tough+2, Weird-1
+                                <label for="rating_4"></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="rating_5" name="rating_5" /> Charm-1, Cool+1, Sharp=0, Tough+2, Weird+1
+                                <label for="rating5"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right -->
+                <div class="col-sm-6">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Look</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Rating</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="character_name" style="background-color: #ededed;">Whenever you roll a highlighted rating, mark experience.</textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
