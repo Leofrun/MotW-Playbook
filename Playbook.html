@@ -31,55 +31,82 @@
         <div class="container">
             <div class="row">
                 <!-- Left -->
+
+                <!-- Opening Text -->
                 <div class="col-sm-6">
-                    <div class="row">
-                        <!-- Opening Text -->
-                        <div class="col-sm-12">
-                            <p style="text-align: left;">To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Rating -->
-                        <div class="col-sm-12">
-                            <h4>Rating</h4>
-                            <p>Change fields below based on rating you chose from Playbook.</p>
-                        </div>
-                    </div>
-                </div>
+                      <p style="text-align: left; margin: 50px">To make your character, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.</p>
+                  </div>
+                <!-- End Opening Text -->
+
                 <!-- End Left -->
 
                 <!-- Right -->
+
+                <!-- Opening Input -->
                 <div class="col-sm-6">
                   <div class="container">
                     <div class="row">
                       <div class="col-sm-12">
-                        <h5>Name</h5>
+                        <h4>Name:</h4>
                         <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
                       </div>
                       <div class="col-sm-12">
-                        <h5>Look</h5>
+                        <h4>Look:</h4>
                         <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- End Opening Input -->
+
                 <!-- End Right -->
             </div>
         </div>
-        <!-- End Top Half -->
 
-        <!-- Mission -->
+        <!-- Stats -->
         <div class="container">
-          <h4>Mission</h4>
-          <textarea id="players_mission" style="background-color: #ededed;">Type your mission here</textarea>
+          <h4>Stats</h4>
+          <br>
+          <!-- Dynamic Tabs Top -->
+          <div class="container">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#luck">Luck</a></li>
+              <li><a data-toggle="tab" href="#harm">Harm</a></li>
+              <li><a data-toggle="tab" href="#leveling-up">Leveling Up</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="luck" class="tab-pane fade in active">
+                <h4>Luck</h4>
+                <p>You can mark off a Luck box to either change a roll you just made to a 12, as if you had rolled that; or change a wound you
+have just taken to count as just 0-harm. If your Luck boxes all get filled, you've run out of good luck.</p>
+              </div>
+              <div id="harm" class="tab-pane fade">
+                <h4>Harm</h4>
+                <p>When you suffer harm, mark of the number of boxes equal to harm suffered. When you reach four harm, tick “Unstable”.</p>
+              </div>
+              <div id="leveling-up" class="tab-pane fade">
+                <h4>Leveling Up</h4>
+                <p>Whenever you roll a highlighted rating, or a move tells you to, mark an experience box.
+When you have filled all five experience boxes, you level up. Erase the marks and pick an improvement from the list below.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Dynamic Tabs Top -->
+
         </div>
-        <!-- End Mission -->
+        <!-- End Stats -->
+
+        <!-- End Top Half -->
 
         <hr>
 
+        <!-- Rating -->
         <div class="container">
-          <h4>Stats</h4>
+          <h3>Rating</h3>
+          <p>Change fields below based on rating you chose from Playbook.</p>
         </div>
+        <!-- End Rating -->
 
         <!-- Rating Score Container -->
         <div class="container">
@@ -152,38 +179,45 @@
 
         <hr>
 
-        <!-- Moves -->
+        <!-- Mission -->
+        <div class="container">
+          <h3>Mission</h3>
+          <textarea id="players_mission" style="background-color: #ededed;">Type your mission here</textarea>
+        </div>
+        <!-- End Mission -->
+
+        <hr>
+
+        <!-- Dynamic Tabs Bottom -->
         <div class="container">
           <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#moves">Moves</a></li>
             <li><a data-toggle="tab" href="#weapons">Weapons</a></li>
+            <li><a data-toggle="tab" href="#inventory">Inventory</a></li>
             <li><a data-toggle="tab" href="#history">History</a></li>
-            <!-- <li><a data-toggle="tab" href="#menu3">Menu 3</a></li> -->
           </ul>
 
           <div class="tab-content">
             <div id="moves" class="tab-pane fade in active">
-              <h4>Moves</h4>
+              <h3>Moves</h3>
               <p>You get all the basic moves, and pick three of your classes moves.</p>
               <textarea id="players_mission" style="background-color: #ededed;">Type your moves here</textarea>
             </div>
             <div id="weapons" class="tab-pane fade">
-              <h4>Weapons</h4>
+              <h3>Weapons</h3>
               <p>List your weapons in the text field below. Try to follow formatting as:<br /><code>weapon name, amount of harm, damage type</code></p>
               <textarea id="players_mission" style="background-color: #ededed;">Type your wepons here</textarea>
             </div>
-            <div id="history" class="tab-pane fade">
-              <h4>History</h4>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-            <!-- <div id="menu3" class="tab-pane fade">
-              <h4>Menu 3</h4>
+            <div id="inventory" class="tab-pane fade">
+              <h3>Inventory</h3>
               <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div> -->
+            </div>
+            <div id="history" class="tab-pane fade">
+              <h3>History</h3>
+              <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
           </div>
-
         </div>
-        </div>
-        <!-- End Moves -->
+        <!-- End Dynamic Tabs Bottom-->
     </body>
 </html>
