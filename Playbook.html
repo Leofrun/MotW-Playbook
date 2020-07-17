@@ -14,13 +14,14 @@
         </style>
     </head>
     <body>
+        <!-- Top Half -->
         <div class="container">
             <div class="row">
                 <!-- Left -->
                 <div class="col-sm-6">
                     <div class="row">
                         <!-- Opening Text -->
-                        <div class="<col-sm-12>">
+                        <div class="col-sm-12">
                             <p style="text-align: left;">To make your Divine, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and gear. Finally, introduce yourself and pick history.</p>
                         </div>
                     </div>
@@ -29,65 +30,11 @@
                         <div class="col-sm-12">
                             <h4>Rating</h4>
                             <p>Change fields below based on rating you chose from Playbook.</p>
-                            <!-- Charm Value -->
-                            <!-- <form action="/action_page.php"> -->
-                            <form action="">
-                                <label for="charm">Charm:</label>
-                                <select id="charm" name="charm">
-                                    <option value="plus">+</option>
-                                    <option value="minus">-</option>
-                                    <option value="equals-zero"> </option>
-                                </select>
-                                <input type="text" id="charm-value" name="charm-value" size="2" />
-                                <!-- <input type="submit" value="Submit"> -->
-                            </form>
-                            <!-- Cool Value -->
-                            <form action="">
-                                <label for="cool">Cool:</label>
-                                <select id="cool" name="cool">
-                                    <option value="plus">+</option>
-                                    <option value="minus">-</option>
-                                    <option value="equals-zero"> </option>
-                                </select>
-                                <input type="text" id="cool-value" name="cool-value" size="2" />
-                                <!-- <input type="submit" value="Submit"> -->
-                            </form>
-                            <!-- Sharp Value -->
-                            <form action="">
-                                <label for="sharp">Sharp:</label>
-                                <select id="sharp" name="sharp">
-                                    <option value="plus">+</option>
-                                    <option value="minus">-</option>
-                                    <option value="equals-zero"> </option>
-                                </select>
-                                <input type="text" id="sharp-value" name="sharp-value" size="2" />
-                                <!-- <input type="submit" value="Submit"> -->
-                            </form>
-                            <!-- Tough Value -->
-                            <form action="">
-                                <label for="tough">Tough:</label>
-                                <select id="tough" name="tough">
-                                    <option value="plus">+</option>
-                                    <option value="minus">-</option>
-                                    <option value="equals-zero"> </option>
-                                </select>
-                                <input type="text" id="tough-value" name="tough-value" size="2" />
-                                <!-- <input type="submit" value="Submit"> -->
-                            </form>
-                            <!-- Weird Value -->
-                            <form action="">
-                                <label for="weird">Weird:</label>
-                                <select id="weird" name="weird">
-                                    <option value="plus">+</option>
-                                    <option value="minus">-</option>
-                                    <option value="equals-zero"> </option>
-                                </select>
-                                <input type="text" id="weird-value" name="weird-value" size="2" />
-                                <!-- <input type="submit" value="Submit"> -->
-                            </form>
                         </div>
                     </div>
                 </div>
+                <!-- End Left -->
+
                 <!-- Right -->
                 <div class="col-sm-6">
                     <table>
@@ -107,17 +54,81 @@
                                 <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
                             </td>
                         </tr>
-                        <tr>
-                            <th>Rating</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="character_name" style="background-color: #ededed;">Whenever you roll a highlighted rating, mark experience.</textarea>
-                            </td>
-                        </tr>
+                        <tr></tr>
                     </table>
+                </div>
+                <!-- End Right -->
+            </div>
+        </div>
+        <!-- End Top Half -->
+
+        <!-- Rating Score Container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Begin Rating Score -->
+                      <!-- <form action="/action_page.php"> -->
+                    <form class="form-inline" action="">
+                        <!-- Charm Value -->
+                        <label for="charm">Charm:</label>
+                        <select id="charm" name="charm">
+                            <option value="plus">+</option>
+                            <option value="minus">-</option>
+                            <option value="equals-zero"> </option>
+                        </select>
+                        <input type="text" id="charm-value" name="charm-value" size="2" />
+                          <!-- <input type="submit" value="Submit"> -->
+                        <!-- End Charm -->
+
+                        <!-- Cool Value -->
+                        <label for="cool">Cool:</label>
+                        <select id="cool" name="cool">
+                            <option value="plus">+</option>
+                            <option value="minus">-</option>
+                            <option value="equals-zero"> </option>
+                        </select>
+                        <input type="text" id="cool-value" name="cool-value" size="2" />
+                          <!-- <input type="submit" value="Submit"> -->
+                        <!-- End Cool Value -->
+
+                        <!-- Sharp Value -->
+                        <label for="sharp">Sharp:</label>
+                        <select id="sharp" name="sharp">
+                            <option value="plus">+</option>
+                            <option value="minus">-</option>
+                            <option value="equals-zero"> </option>
+                        </select>
+                        <input type="text" id="sharp-value" name="sharp-value" size="2" />
+                          <!-- <input type="submit" value="Submit" /> -->
+                        <!-- End Sharp Value -->
+
+                        <!-- Tough Value -->
+                        <label for="tough">Tough:</label>
+                        <select id="tough" name="tough">
+                            <option value="plus">+</option>
+                            <option value="minus">-</option>
+                            <option value="equals-zero"> </option>
+                        </select>
+                        <input type="text" id="tough-value" name="tough-value" size="2" />
+                          <!-- <input type="submit" value="Submit"> -->
+                        <!-- End Tough Value -->
+
+                        <!-- Weird Value -->
+                        <label for="weird">Weird:</label>
+                        <select id="weird" name="weird">
+                            <option value="plus">+</option>
+                            <option value="minus">-</option>
+                            <option value="equals-zero"> </option>
+                        </select>
+                        <input type="text" id="weird-value" name="weird-value" size="2" />
+                          <!-- <input type="submit" value="Submit"> -->
+                        <!-- End Weird Value -->
+                        <!-- End Weird Value -->
+                    </form>
+                    <!-- End Rating Score -->
                 </div>
             </div>
         </div>
+        <!-- End Rating Score Container -->
     </body>
 </html>
