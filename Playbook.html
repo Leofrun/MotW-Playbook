@@ -28,27 +28,63 @@
                         <!-- Rating -->
                         <div class="col-sm-12">
                             <h4>Rating</h4>
-                            <p>Pick one from each line, and write under look on the right</p>
-                            <div>
-                                <input type="checkbox" id="rating_1" name="rating_1" /> Charm+1, Cool+1, Sharp-1, Tough+2, Weird=0
-                                <label for="rating_1"></label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="rating_2" name="rating_2" /> Charm-1, Cool+2, Sharp-1, Tough+2, Weird=0
-                                <label for="rating_2"></label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="rating_3" name="rating_3" /> Charm-1, Cool=0, Sharp+1, Tough+2, Weird+1
-                                <label for="rating_3"></label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="rating_4" name="rating_4" /> Charm+1, Cool+1, Sharp=0, Tough+2, Weird-1
-                                <label for="rating_4"></label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="rating_5" name="rating_5" /> Charm-1, Cool+1, Sharp=0, Tough+2, Weird+1
-                                <label for="rating5"></label>
-                            </div>
+                            <p>Change fields below based on rating you chose from Playbook.</p>
+                            <!-- Charm Value -->
+                            <!-- <form action="/action_page.php"> -->
+                            <form action="">
+                                <label for="charm">Charm:</label>
+                                <select id="charm" name="charm">
+                                    <option value="plus">+</option>
+                                    <option value="minus">-</option>
+                                    <option value="equals-zero"> </option>
+                                </select>
+                                <input type="text" id="charm-value" name="charm-value" size="2" />
+                                <!-- <input type="submit" value="Submit"> -->
+                            </form>
+                            <!-- Cool Value -->
+                            <form action="">
+                                <label for="cool">Cool:</label>
+                                <select id="cool" name="cool">
+                                    <option value="plus">+</option>
+                                    <option value="minus">-</option>
+                                    <option value="equals-zero"> </option>
+                                </select>
+                                <input type="text" id="cool-value" name="cool-value" size="2" />
+                                <!-- <input type="submit" value="Submit"> -->
+                            </form>
+                            <!-- Sharp Value -->
+                            <form action="">
+                                <label for="sharp">Sharp:</label>
+                                <select id="sharp" name="sharp">
+                                    <option value="plus">+</option>
+                                    <option value="minus">-</option>
+                                    <option value="equals-zero"> </option>
+                                </select>
+                                <input type="text" id="sharp-value" name="sharp-value" size="2" />
+                                <!-- <input type="submit" value="Submit"> -->
+                            </form>
+                            <!-- Tough Value -->
+                            <form action="">
+                                <label for="tough">Tough:</label>
+                                <select id="tough" name="tough">
+                                    <option value="plus">+</option>
+                                    <option value="minus">-</option>
+                                    <option value="equals-zero"> </option>
+                                </select>
+                                <input type="text" id="tough-value" name="tough-value" size="2" />
+                                <!-- <input type="submit" value="Submit"> -->
+                            </form>
+                            <!-- Weird Value -->
+                            <form action="">
+                                <label for="weird">Weird:</label>
+                                <select id="weird" name="weird">
+                                    <option value="plus">+</option>
+                                    <option value="minus">-</option>
+                                    <option value="equals-zero"> </option>
+                                </select>
+                                <input type="text" id="weird-value" name="weird-value" size="2" />
+                                <!-- <input type="submit" value="Submit"> -->
+                            </form>
                         </div>
                     </div>
                 </div>
