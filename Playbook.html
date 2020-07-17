@@ -5,11 +5,20 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
         <title>Playbook</title>
         <style>
+
             textarea#character_name {
-                border: 1px solid;
+                border: 1 solid;
                 padding: 10px;
-                width: 300px;
+                width: 45.5%;
+                resize: vertical;
                 overflow: auto;
+            }
+
+            textarea#players_mission {
+                border: 1 solid;
+                padding: 10px;
+                width: 100%;
+                resize: vertical;
             }
         </style>
     </head>
@@ -37,25 +46,18 @@
 
                 <!-- Right -->
                 <div class="col-sm-6">
-                    <table>
-                        <tr>
-                            <th>Name</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Look</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
-                            </td>
-                        </tr>
-                        <tr></tr>
-                    </table>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h5>Name</h5>
+                        <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
+                      </div>
+                      <div class="col-sm-12">
+                        <h5>Look</h5>
+                        <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <!-- End Right -->
             </div>
@@ -130,5 +132,12 @@
             </div>
         </div>
         <!-- End Rating Score Container -->
+
+        <!-- Mission -->
+        <div class="container">
+          <h4>Mission</h4>
+          <textarea id="players_mission" style="background-color: #ededed;" size="150">Type your mission here</textarea>
+        </div>
+        <!-- End Mission -->
     </body>
 </html>
