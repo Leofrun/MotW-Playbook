@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="playbook.css" />
+  <link rel="stylesheet" type="text/css" href="Stylesheet.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  </head>
@@ -14,9 +14,11 @@
   <div class="container">
    <div class="row">
     <div class="col-sm-6">
-     <p style="text-align: left; margin: 50px;">
+     <p style="text-align: left; margin: 25px;">
       To make your character, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.
      </p>
+     <h5 style="text-align: left; margin-left: 25px;">Current level</h5>
+     <textarea id="current-level" style="background-color: #ededed;">Type level</textarea>
     </div>
     <div class="col-sm-6">
      <div class="container">
@@ -126,10 +128,17 @@
   <div class="container">
    <h3>Rating</h3>
    <p>Change fields below based on rating you chose from Playbook.</p>
-
+   <p>Check the boxes below to highlight skill.</p>
    <div class="container">
     <div class="row">
-     <div class="col-lg-12">
+     <div class="col-sm-2">
+       <input type="checkbox" id="check-charm" name="check-charm" value="check-charm" /> <em>Charm</em><br />
+       <input type="checkbox" id="check-cool" name="check-cool" value="check-cool" /> <em>Cool</em><br />
+       <input type="checkbox" id="check-sharp" name="check-sharp" value="check-sharp" /> <em>Sharp</em><br />
+       <input type="checkbox" id="check-tough" name="check-tough" value="check-tough" /> <em>Tough</em><br />
+       <input type="checkbox" id="check-weird" name="check-weird" value="check-weird" /> <em>Weird</em><br />
+     </div>
+     <div class="col-sm-10">
       <form class="form-inline">
        <label for="charm">Charm:</label>
        <select id="charm" name="charm">
@@ -187,7 +196,7 @@
     <div class="tab-content">
      <div id="leveling-up" class="tab-pane fade in active">
       <h3>Leveling Up</h3>
-      <p>Whenever you roll a highlighted rating, or a move tells you to, mark an experience box.</p>
+      <p>Whenever you roll a highlighted rating, or a move tells you to, mark an experience box and update current level.</p>
       <div class="container">
        <div class="row">
         <div class="col-sm-8">
@@ -204,8 +213,10 @@
           </div>
          </div>
         </div>
+        <div class="col-sm-4">
+        </div>
        </div>
-       <div class="col-sm-4"></div>
+
       </div>
       <p>
         Fill out the fileds below with your <strong><em>Improvements</em></strong> from the Playbook of your Hunter.
@@ -317,18 +328,66 @@
       List your weapons in the text field below. Enter each item on its own line. Try to follow formatting as:<br />
       <code>weapon name, amount of harm, damage type</code>
      </p>
-     <textarea id="players_mission" style="background-color: #ededed;">Type your wepons here</textarea>
+     <textarea id="players_mission" style="background-color: #ededed;">Type your weapons here</textarea>
     </div>
     <div id="inventory" class="tab-pane fade">
      <h3>Inventory</h3>
      <p>
       List your items in the text field below. Enter each item on its own line. Try to follow formatting as:<br />
       <code>item name x quantity</code></p>
-    <textarea id="players_mission" style="background-color: #ededed;">Type your wepons here</textarea>
+    <textarea id="players_mission" style="background-color: #ededed;">Type your weapons here</textarea>
     </div>
     <div id="history" class="tab-pane fade">
      <h3>History</h3>
-     <textarea id="players_mission" style="background-color: #ededed;">Type your notes here</textarea>
+     <p>Go around the group again. When it's your turn, pick one for each of the other hunters:</p>
+     <table id="customers">
+  <tr>
+    <th>Hunter</th>
+    <th>History</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+  </tr>
+  <tr>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+  </tr>
+  <tr>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+  </tr>
+  <tr>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+  </tr>
+  <tr>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+  </tr>
+  <tr>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+  </tr>
+  <tr>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+  </tr>
+</table>
+
+
+
+
+
+
     </div>
     <div id="notes" class="tab-pane fade">
      <h3>Additional Notes</h3>

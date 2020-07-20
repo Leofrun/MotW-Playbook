@@ -1,0 +1,60 @@
+h4 {
+  padding: 10px;
+}
+
+textarea#character_name {
+    border: 1px;
+    padding: 10px;
+    width: 45.75%;
+    resize: vertical;
+    overflow: auto;
+}
+textarea#players_mission {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+input#stats-checkboxes {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+textarea#level-imporvment {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea#current-level {
+    border: 1px;
+    /* margin-top: 5px; */
+    margin-left: 25px;
+    padding: 5px;
+    width: 100px;
+    resize: none;
+}
+
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5f7a91;
+  color: white;
+}
