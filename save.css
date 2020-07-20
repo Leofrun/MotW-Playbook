@@ -24,10 +24,51 @@ By using our site, you acknowledge that you have read and understand our Cookie 
         }
 
         function receivedText() {
-			document.getElementById("input1").value = fr.result;
-			document.getElementById("input2").value = fr.result;
-			document.getElementById("input3").value = fr.result;
-
+			document.getElementById("current-level").value = data[0]
+			document.getElementById("character_name").value = data[1]
+			document.getElementById("character_look").value = data[2]
+			document.getElementById("level-improvment1").value = data[3]
+			document.getElementById('level-improvment2').value = data[4]
+			document.getElementById('level-improvment3').value = data[5]
+			document.getElementById('level-improvment4').value = data[6]
+			document.getElementById('level-improvment5').value = data[7]
+			document.getElementById('level-improvment6').value = data[8]
+			document.getElementById('level-improvment7').value = data[9]
+			document.getElementById('level-improvment8').value = data[10]
+			document.getElementById('level-improvment9').value = data[11]
+			document.getElementById('level-improvment10').value = data[12]
+			document.getElementById("level-improvment1b").value = data[13]
+			document.getElementById('level-improvment2b').value = data[14]
+			document.getElementById('level-improvment3b').value = data[15]
+			document.getElementById('level-improvment4b').value = data[16]
+			document.getElementById('level-improvment5b').value = data[17]
+			document.getElementById('level-improvment6b').value = data[18]
+			document.getElementById('level-improvment7b').value = data[19]
+			document.getElementById('level-improvment8b').value = data[20]
+			document.getElementById('level-improvment9b').value = data[21]
+			document.getElementById('level-improvment10b').value = data[22]
+			document.getElementById("players_mission").value = data[23]
+			document.getElementById("players_mission-moves").value = data[24]
+			document.getElementById("players_mission-weapons").value = data[25]
+			document.getElementById("players_mission-inventory").value = data[26]
+			document.getElementById("players_history1a").value = data[27]
+			document.getElementById("players_history1b").value = data[28]
+			document.getElementById("players_history1c").value = data[29]
+			document.getElementById("players_history2a").value = data[30]
+			document.getElementById("players_history2b").value = data[31]
+			document.getElementById("players_history2c").value = data[32]
+			document.getElementById("players_history3a").value = data[33]
+			document.getElementById("players_history3b").value = data[34]
+			document.getElementById("players_history3c").value = data[35]
+			document.getElementById("players_history4a").value = data[36]
+			document.getElementById("players_history4b").value = data[37]
+			document.getElementById("players_history5c").value = data[38]
+			document.getElementById("players_history6a").value = data[39]
+			document.getElementById("players_history6b").value = data[40]
+			document.getElementById("players_history6c").value = data[41]
+			document.getElementById("players_history7a").value = data[42]
+			document.getElementById("players_history7b").value = data[43]
+			document.getElementById("players_history7c").value = data[44]
         }
     }
 })();
@@ -36,9 +77,52 @@ function saveFormAsTextFile()
         // Based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
         {
         var textToSave =
-          document.getElementById('input1').value + '\n' +
-          document.getElementById('input2').value + '\n' +
-		  document.getElementById('input3').value
+          document.getElementById("current-level").value + '\n' +
+        	document.getElementById("character_name").value + '\n' +
+		  		document.getElementById("character_look").value	+ '\n' +
+					document.getElementById('level-improvment1').value	+ '\n' +
+					document.getElementById('level-improvment2').value	+ '\n' +
+					document.getElementById('level-improvment3').value	+ '\n' +
+					document.getElementById('level-improvment4').value	+ '\n' +
+					document.getElementById('level-improvment5').value	+ '\n' +
+					document.getElementById('level-improvment6').value	+ '\n' +
+					document.getElementById('level-improvment7').value	+ '\n' +
+					document.getElementById('level-improvment8').value	+ '\n' +
+					document.getElementById('level-improvment9').value	+ '\n' +
+					document.getElementById('level-improvment10').value + '\n' +
+					document.getElementById('level-improvment1b').value	+ '\n' +
+					document.getElementById('level-improvment2b').value	+ '\n' +
+					document.getElementById('level-improvment3b').value	+ '\n' +
+					document.getElementById('level-improvment4b').value	+ '\n' +
+					document.getElementById('level-improvment5b').value	+ '\n' +
+					document.getElementById('level-improvment6b').value	+ '\n' +
+					document.getElementById('level-improvment7b').value	+ '\n' +
+					document.getElementById('level-improvment8b').value	+ '\n' +
+					document.getElementById('level-improvment9b').value	+ '\n' +
+					document.getElementById('level-improvment10b').value + '\n' +
+					document.getElementById("players_mission").valule + '\n' +
+					document.getElementById("players_mission-moves").value + '\n' +
+					document.getElementById("players_mission-weapons").value + '\n' +
+					document.getElementById("players_history1a").value + '\n' +
+					document.getElementById("players_history1b").value + '\n' +
+					document.getElementById("players_history1c").value + '\n' +
+					document.getElementById("players_history2a").value + '\n' +
+					document.getElementById("players_history2b").value + '\n' +
+					document.getElementById("players_history2c").value + '\n' +
+					document.getElementById("players_history3a").value + '\n' +
+					document.getElementById("players_history3b").value + '\n' +
+					document.getElementById("players_history3c").value + '\n' +
+					document.getElementById("players_history4a").value + '\n' +
+					document.getElementById("players_history4b").value + '\n' +
+					document.getElementById("players_history5c").value + '\n' +
+					document.getElementById("players_history6a").value + '\n' +
+					document.getElementById("players_history6b").value + '\n' +
+					document.getElementById("players_history6c").value + '\n' +
+					document.getElementById("players_history7a").value + '\n' +
+					document.getElementById("players_history7b").value + '\n' +
+					document.getElementById("players_history7c").value
+
+
 
          var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
         var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);

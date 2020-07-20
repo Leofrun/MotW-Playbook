@@ -6,10 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="Stylesheet.css" />
+  <link rel="stylesheet" type="text/css" href="save.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  </head>
  <body>
+
+  <button onclick="saveFormAsTextFile()">Save</button>
+  <form name="mainForm" method="get" id="Main">
+  <label for="file">Choose file to upload</label>
+  <input type="file" id='fileinput' accept=".txt">
   <!-- Top Half -->
   <div class="container">
    <div class="row">
@@ -29,7 +35,7 @@
        </div>
        <div class="col-sm-12">
         <h4>Look:</h4>
-        <textarea id="character_name" style="background-color: #ededed;">Describe what your character looks like</textarea>
+        <textarea id="character_look" style="background-color: #ededed;">Describe what your character looks like</textarea>
        </div>
       </div>
      </div>
@@ -265,29 +271,29 @@
         <div class="row">
           <div class="col-sm-6">
             <form class="form-inline checkbox-inline">
-              <input type="checkbox" id="level-improvment1" name="level-improvment1" value="improvment1" />
+              <input type="checkbox" id="level-improvment1b" name="level-improvment1b" value="improvment1" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment2" name="level-improvment2" value="improvment2" />
+              <input type="checkbox" id="level-improvment2b" name="level-improvment2b" value="improvment2" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment3" name="level-improvment3" value="improvment3" />
+              <input type="checkbox" id="level-improvment3b" name="level-improvment3b" value="improvment3" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment4" name="level-improvment4" value="improvment4" />
+              <input type="checkbox" id="level-improvment4b" name="level-improvment4b" value="improvment4" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment5" name="level-improvment5" value="improvment5" />
+              <input type="checkbox" id="level-improvment5b" name="level-improvment5b" value="improvment5" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea>
             </form>
           </div>
           <div class="col-sm-6">
             <form class="form-inline checkbox-inline">
-              <input type="checkbox" id="level-improvment6" name="level-improvment6" value="improvment6" />
+              <input type="checkbox" id="level-improvment6b" name="level-improvment6b" value="improvment6" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment7" name="level-improvment7" value="improvment7" />
+              <input type="checkbox" id="level-improvment7b" name="level-improvment7b" value="improvment7" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment8" name="level-improvment8" value="improvment8" />
+              <input type="checkbox" id="level-improvment8b" name="level-improvment8b" value="improvment8" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment9" name="level-improvment9" value="improvment9" />
+              <input type="checkbox" id="level-improvment9b" name="level-improvment9b" value="improvment9" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br /><br />
-              <input type="checkbox" id="level-improvment10" name="level-improvment10" value="improvment10" />
+              <input type="checkbox" id="level-improvment10b" name="level-improvment10b" value="improvment10" />
               <textarea id="level-imporvment" style="background-color: #ededed;"></textarea>
             </form>
           </div>
@@ -320,7 +326,7 @@
     <div id="moves" class="tab-pane fade in active">
      <h3>Moves</h3>
      <p>You get all the basic moves, and pick three of your classes moves.</p>
-     <textarea id="players_mission" style="background-color: #ededed;">Type your moves here</textarea>
+     <textarea id="players_mission-moves" style="background-color: #ededed;">Type your moves here</textarea>
     </div>
     <div id="weapons" class="tab-pane fade">
      <h3>Weapons</h3>
@@ -328,14 +334,14 @@
       List your weapons in the text field below. Enter each item on its own line. Try to follow formatting as:<br />
       <code>weapon name, amount of harm, damage type</code>
      </p>
-     <textarea id="players_mission" style="background-color: #ededed;">Type your weapons here</textarea>
+     <textarea id="players_mission-weapons" style="background-color: #ededed;">Type your weapons here</textarea>
     </div>
     <div id="inventory" class="tab-pane fade">
      <h3>Inventory</h3>
      <p>
       List your items in the text field below. Enter each item on its own line. Try to follow formatting as:<br />
       <code>item name x quantity</code></p>
-    <textarea id="players_mission" style="background-color: #ededed;">Type your weapons here</textarea>
+    <textarea id="players_mission-inventory" style="background-color: #ededed;">Type your weapons here</textarea>
     </div>
     <div id="history" class="tab-pane fade">
      <h3>History</h3>
@@ -347,39 +353,39 @@
     <th>Notes</th>
   </tr>
   <tr>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+    <td><textarea id="players_history1a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_history1b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_history1c" style="background-color: #ededed;">Type in their notes here</textarea></td>
   </tr>
   <tr>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+    <td><textarea id="players_history2a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_history2b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_history2c" style="background-color: #ededed;">Type in their notes here</textarea></td>
   </tr>
   <tr>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+    <td><textarea id="players_history3a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_history3b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_history3c" style="background-color: #ededed;">Type in their notes here</textarea></td>
   </tr>
   <tr>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+    <td><textarea id="players_history4a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_history4b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_history4c" style="background-color: #ededed;">Type in their notes here</textarea></td>
   </tr>
   <tr>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+    <td><textarea id="players_history5a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_history5b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_history5c" style="background-color: #ededed;">Type in their notes here</textarea></td>
   </tr>
   <tr>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+    <td><textarea id="players_history6a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_history6b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_history6c" style="background-color: #ededed;">Type in their notes here</textarea></td>
   </tr>
   <tr>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type their history with you here</textarea></td>
-    <td><textarea id="players_mission" style="background-color: #ededed;">Type in their notes here</textarea></td>
+    <td><textarea id="players_history7a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+    <td><textarea id="players_history7b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+    <td><textarea id="players_history7c" style="background-color: #ededed;">Type in their notes here</textarea></td>
   </tr>
 </table>
 
@@ -391,7 +397,7 @@
     </div>
     <div id="notes" class="tab-pane fade">
      <h3>Additional Notes</h3>
-     <textarea id="players_mission" style="background-color: #ededed;">Type your notes here</textarea>
+     <textarea id="players_mission-notes" style="background-color: #ededed;">Type your notes here</textarea>
     </div>
    </div>
   </div>

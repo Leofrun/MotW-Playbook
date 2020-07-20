@@ -9,12 +9,178 @@ textarea#character_name {
     resize: vertical;
     overflow: auto;
 }
+
+textarea#character_look {
+    border: 1px;
+    padding: 10px;
+    width: 45.75%;
+    resize: vertical;
+    overflow: auto;
+}
+
 textarea#players_mission {
     border: 1px;
     padding: 10px;
     width: 100%;
     resize: vertical;
 }
+
+textarea#players_mission-notes {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_mission-moves {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_mission-weapons {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_mission-inventory {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history1a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history1b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history1c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history7a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history7b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history7c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
 input#stats-checkboxes {
   display: inline-block;
   padding-right: 10px;
