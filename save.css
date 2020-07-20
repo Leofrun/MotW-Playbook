@@ -103,6 +103,7 @@ function saveFormAsTextFile()
 					document.getElementById("players_mission").valule + '\n' +
 					document.getElementById("players_mission-moves").value + '\n' +
 					document.getElementById("players_mission-weapons").value + '\n' +
+					document.getElementById("players_mission-iventory").value + '\n' +
 					document.getElementById("players_history1a").value + '\n' +
 					document.getElementById("players_history1b").value + '\n' +
 					document.getElementById("players_history1c").value + '\n' +
