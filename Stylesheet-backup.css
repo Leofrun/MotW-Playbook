@@ -1,0 +1,226 @@
+h4 {
+  padding: 10px;
+}
+
+textarea#character_name {
+    border: 1px;
+    padding: 10px;
+    width: 45.75%;
+    resize: vertical;
+    overflow: auto;
+}
+
+textarea#character_look {
+    border: 1px;
+    padding: 10px;
+    width: 45.75%;
+    resize: vertical;
+    overflow: auto;
+}
+
+textarea#players_mission {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_mission-notes {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_mission-moves {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_mission-weapons {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_mission-inventory {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history1a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history1b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history1c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history7a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history7b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history7c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+input#stats-checkboxes {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+textarea#level-imporvment {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea#current-level {
+    border: 1px;
+    /* margin-top: 5px; */
+    margin-left: 25px;
+    padding: 5px;
+    width: 100px;
+    resize: none;
+}
+
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5f7a91;
+  color: white;
+}
