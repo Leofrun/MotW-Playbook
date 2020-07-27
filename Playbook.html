@@ -1,496 +1,667 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Playbook</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="Stylesheet.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
-  <body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Playbook</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="Stylesheet.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-    <form name="mainForm" method="get" id="Main">
+  <form name="mainForm" method="get" id="Main">
+    <div>
+      <label for="file">Choose file to upload</label>
+      <input type="file" id="fileinput" accept=".txt"/>
+    </div>
+    <br/>
+    <button onclick="saveFormAsTextFile()"><strong>Save</strong></button>
+    <div class="container">
+      <br>
+      <strong><p style="color:#ef5a5c";>Please note: do not save with line breaks. You can have them while playing, but you will need to go through and replace line breaks with marks so you know where they should be for next session.</p></strong>
+      <br>
+    </div>
+    <div class="container">
       <div class="container">
-        <div class="container">
-          <div class="col-sm-6">
-             <p>
-               To make your character, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.
-             </p>
-             <h5>Current level</h5>
-             <textarea id="current-level" style="background-color: #ededed;">Type level</textarea>
-           </div>
-           <div class="col-sm-6">
-             <div class="container">
-               <div class="row">
-                 <div class="col-sm-12">
-                   <h4>Name:</h4>
-                   <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
-                 </div>
-                 <div class="col-sm-12">
-                   <h4>Look:</h4>
-                   <textarea id="character_look" style="background-color: #ededed;">Describe what your character looks like</textarea>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-
-         <div class="container">
-           <ul class="nav nav-tabs">
-             <li class="active"><a data-toggle="tab" href="#luck">Luck</a></li>
-             <li><a data-toggle="tab" href="#harm">Harm</a></li>
-           </ul>
-         </div>
-
-         <div class="tab-content">
-           <div id="luck" class="tab-pane fade in active">
-             <h3>Luck</h3>
-             <p>
-               You can mark off a Luck box to either change a roll you just made to a 12, as if you had rolled that; or change a wound you have just taken to count as just 0-harm. If your Luck boxes all get filled, you've run out of good luck.
-             </p>
-             <div class="container">
-               <div class="row">
-                 <div class="col-sm-8">
-                   <div class="col-sm-1">
-                     <p>Okay</p>
-                     </div>
-                     <div class="col-sm-4">
-                       <div class="form-check">
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option2"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option3"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option4"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option5"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option6"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option7"/>
-                       </div>
-                     </div>
-                     <div class="col-sm">
-                       <p>Doomed</p>
-                     </div>
-                   </div>
-                   <div class="col-sm-4">
-                   </div>
-                   <div class="col-sm-12">
-                     <textarea id="luck-total" style="background-color: #ededed;">Enter total luck here before saving</textarea><br />
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div id="harm" class="tab-pane fade">
-               <h3>Harm</h3>
-               <p>When you suffer harm, mark of the number of boxes equal to harm suffered. When you reach four harm, tick “Unstable”.</p>
-               <div id=harm-check class="container">
-                 <div class="row">
-                   <div class="col-sm-4">
-                     <div class="col-sm-2">
-                       <p>Okay</p>
-                     </div>
-                     <div class="col-sm-8">
-                       <div class="form-check">
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option2"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option3"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option4"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option5"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option6"/>
-                         <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option7"/>
-                       </div>
-                     </div>
-                     <div class="col-sm-1">
-                       <p>Dying</p>
-                     </div>
-                   </div>
-                   <div class="col-sm-2">
-                   </div>
-                   <div class="col-sm-6">
-                     <div class="row">
-                       <div class="col-sm-2">
-                         <p>Unstable</p>
-                       </div>
-                       <div class="col-sm-1">
-                         <div class="form-check">
-                           <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"/>
-                         </div>
-                       </div>
-                       <div class="col-sm-5">
-                         <p style="text-align: left;">(Unstable injuries will worsen as time passes)</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="col-sm-12">
-
-                     <textarea id="harm-total" style="background-color: #ededed;">Enter total harm here before saving</textarea><br />
-                     <textarea id="unstable-total" style="background-color: #ededed;">Are you unstable? Yes or no</textarea>
-                   </div>
-                 </div>
-                </div>
-              </div>
-            </div>
-
-        <hr />
-
-        <div class="container">
-          <h3>Rating</h3>
-          <p>Change fields below based on rating you chose from Playbook.</p>
-          <p>Check the boxes below to highlight skill.</p>
+        <div class="col-sm-6">
+          <p>
+            To make your character, first pick a name. Then follow the instructions below to decide your look, ratings, mission, moves, and weapons. Finally, introduce yourself and pick history.
+          </p>
+          <h5>Current level</h5>
+          <textarea id="current-level" style="background-color: #ededed;"></textarea>
+        </div>
+        <div class="col-sm-6">
           <div class="container">
             <div class="row">
+              <div class="col-sm-12">
+                <h4>Name:</h4>
+                <textarea id="character_name" style="background-color: #ededed;">Type name here</textarea>
+              </div>
+              <div class="col-sm-12">
+                <h4>Look:</h4>
+                <textarea id="character_look" style="background-color: #ededed;">Describe what your character looks like</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#luck">Luck</a></li>
+          <li><a data-toggle="tab" href="#harm">Harm</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content">
+        <div id="luck" class="tab-pane fade in active">
+          <h3>Luck</h3>
+          <p>
+            You can mark off a Luck box to either change a roll you just made to a 12, as if you had rolled that; or change a wound you have just taken to count as just 0-harm. If your Luck boxes all get filled, you've run out of good luck.
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="col-sm-1">
+                  <p>Okay</p>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option2"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option3"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option4"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option5"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option6"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option7"/>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <p>Doomed</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <p>Enter total luck here before saving</p>
+                <textarea id="luck-total" style="background-color: #ededed;"></textarea>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div id="harm" class="tab-pane fade">
+          <h3>Harm</h3>
+          <p>When you suffer harm, mark of the number of boxes equal to harm suffered. When you reach four harm, tick “Unstable”.</p>
+          <div id=harm-check class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="col-sm-2">
+                  <p>Okay</p>
+                </div>
+                <div class="col-sm-8">
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option2"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option3"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option4"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option5"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option6"/>
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option7"/>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <p>Dying</p>
+                </div>
+              </div>
               <div class="col-sm-2">
-                <input type="checkbox" id="check-charm" name="check-charm" value="check-charm" /> <em>Charm</em><br />
-                <input type="checkbox" id="check-cool" name="check-cool" value="check-cool" /> <em>Cool</em><br />
-                <input type="checkbox" id="check-sharp" name="check-sharp" value="check-sharp" /> <em>Sharp</em><br />
-                <input type="checkbox" id="check-tough" name="check-tough" value="check-tough" /> <em>Tough</em><br />
-                <input type="checkbox" id="check-weird" name="check-weird" value="check-weird" /> <em>Weird</em><br />
               </div>
-              <div class="col-sm-10">
-                <div class="form-inline">
-
-                  <label for="charm">Charm:</label>
-                  <select id="charm" name="charm">
-                    <option value="plus">+</option>
-                    <option value="minus">-</option>
-                    <option value="equals-zero"> </option>
-                  </select>
-                  <input type="text" id="charm-value" name="charm-value" size="2" />
-
-                  <label for="cool">Cool:</label>
-                  <select id="cool" name="cool">
-                    <option value="plus">+</option>
-                    <option value="minus">-</option>
-                    <option value="equals-zero"> </option>
-                  </select>
-                  <input type="text" id="cool-value" name="cool-value" size="2" />
-
-                  <label for="sharp">Sharp:</label>
-                  <select id="sharp" name="sharp">
-                    <option value="plus">+</option>
-                    <option value="minus">-</option>
-                    <option value="equals-zero"> </option>
-                  </select>
-                  <input type="text" id="sharp-value" name="sharp-value" size="2" />
-
-                  <label for="tough">Tough:</label>
-                  <select id="tough" name="tough">
-                    <option value="plus">+</option>
-                    <option value="minus">-</option>
-                    <option value="equals-zero"> </option>
-                  </select>
-                  <input type="text" id="tough-value" name="tough-value" size="2" />
-
-                  <label for="weird">Weird:</label>
-                  <select id="weird" name="weird">
-                    <option value="plus">+</option>
-                    <option value="minus">-</option>
-                    <option value="equals-zero"> </option>
-                  </select>
-                  <input type="text" id="weird-value" name="weird-value" size="2" />
-                </div>
-                <br/>
-                <p>Please enter what skills are highlighted and rating total below before saving.</p>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <p>Enter highlighted skills below<br />(ex. <code>Charm, Cool</code>)</p>
-                      <textarea id="rating-total" style="background-color: #ededed;"></textarea> <br/>
-                    </div>
-                    <div class="col-sm-6">
-                      <p>Enter total rating below<br />(ex. <code>charm +2, cool -1, etc.</code>)</p>
-                      <textarea id="rating-total" style="background-color: #ededed;"></textarea>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <p>Unstable</p>
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="form-check">
+                      <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"/>
                     </div>
                   </div>
-
+                  <div class="col-sm-5">
+                    <p style="text-align: left;">(Unstable injuries will worsen as time passes)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <textarea id="harm-total" style="background-color: #ededed;">Enter total harm here before saving</textarea>
+              </div>
+              <div class="col-sm-6">
+                <textarea id="unstable-total" style="background-color: #ededed;">Are you unstable? Yes or no</textarea>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <br />
+      <hr />
 
+      <div class="container">
+        <h3>Rating</h3>
+        <p>Change fields below based on rating you chose from Playbook.</p>
+        <p>Check the boxes below to highlight skill.</p>
         <div class="container">
-          <ul class="nav nav-tabs">
-            <li class="active"></li>
-            <li><a data-toggle="tab" href="#leveling-up">Leveling Up</a></li>
-            <li><a data-toggle="tab" href="#advanced-leveling">Advanced Leveling</a></li>
-          </ul>
+          <div class="form-inline">
 
-          <div class="tab-content">
-            <div id="leveling-up" class="tab-pane fade in active">
-              <h3>Leveling Up</h3>
-              <p>Whenever you roll a highlighted rating, or a move tells you to, mark an experience box and update current level.</p>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <div class="col-sm-2">
-                      <p>Experience:</p>
-                    </div>
-                    <div class="col-sm-10">
-                      <div class="form-check">
-                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" />
-                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option2" />
-                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option3" />
-                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option4" />
-                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option5" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4"></div>
+            <label for="charm">Charm:</label>
+            <!-- <select id="charm" name="charm"> -->
+            <!-- <option value="plus">+</option> -->
+            <!-- <option value="minus">-</option> -->
+            <!-- <option value="equals-zero"> </option> -->
+            <!-- </select> -->
+            <textarea id="charm-value" name="charm-value" style="background-color: #ededed;"></textarea>
+            <label for="cool">Cool:</label>
+            <!-- <select id="cool" name="cool"> -->
+            <!-- <option value="plus">+</option> -->
+            <!-- <option value="minus">-</option> -->
+            <!-- <option value="equals-zero"> </option> -->
+            <!-- </select> -->
+            <textarea id="cool-value" name="cool-value" style="background-color: #ededed;"></textarea>
+            <label for="sharp">Sharp:</label>
+            <!-- <select id="sharp" name="sharp"> -->
+            <!-- <option value="plus">+</option> -->
+            <!-- <option value="minus">-</option> -->
+            <!-- <option value="equals-zero"> </option> -->
+            <!-- </select> -->
+            <textarea id="sharp-value" name="sharp-value" style="background-color: #ededed;"></textarea>
+            <label for="tough">Tough:</label>
+            <!-- <select id="tough" name="tough"> -->
+            <!-- <option value="plus">+</option> -->
+            <!-- <option value="minus">-</option> -->
+            <!-- <option value="equals-zero"> </option> -->
+            <!-- </select> -->
+            <textarea id="tough-value" name="tough-value" style="background-color: #ededed;"></textarea>
+            <label for="weird">Weird:</label>
+            <!-- <select id="weird" name="weird"> -->
+            <!-- <option value="plus">+</option> -->
+            <!-- <option value="minus">-</option> -->
+            <!-- <option value="equals-zero"> </option> -->
+            <!-- </select> -->
+            <textarea id="weird-value" name="weird-value" style="background-color: #ededed;"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="active"></li>
+          <li><a data-toggle="tab" href="#leveling-up">Leveling Up</a></li>
+          <li><a data-toggle="tab" href="#advanced-leveling">Advanced Leveling</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="leveling-up" class="tab-pane fade in active">
+            <h3>Leveling Up</h3>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8">
+                  <p>Whenever you flub a roll mark an experience box and update current level.</p>
                 </div>
-              </div>
-              <p>
-                Fill out the fileds below with your <strong><em>Improvements</em></strong> from the Playbook of your Hunter.
-              </p>
-              <p>When you have filled all five experience boxes, you level up. Erase the marks and pick an improvement from the list below.</p>
-              <p>After you have leveled up five times, you qualify for advanced improvements in addition to these.</p>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-inline checkbox-inline">
-                      <input type="checkbox" id="level-improvment1" name="level-improvment1" value="improvment1" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment2" name="level-improvment2" value="improvment2" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment3" name="level-improvment3" value="improvment3" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment4" name="level-improvment4" value="improvment4" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment5" name="level-improvment5" value="improvment5" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-inline checkbox-inline">
-                      <input type="checkbox" id="level-improvment6" name="level-improvment6" value="improvment6" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment7" name="level-improvment7" value="improvment7" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment8" name="level-improvment8" value="improvment8" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment9" name="level-improvment9" value="improvment9" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment10" name="level-improvment10" value="improvment10" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea>
-                    </div>
-                  </div>
+                <div class="col-sm-4">
+                  Enter total experience here before saving
                 </div>
               </div>
             </div>
-            <div id="advanced-leveling" class="tab-pane fade">
-              <h3>Advanced Leveling</h3>
-              <p>
-                Fill out the fileds below with your <strong><em>Advanced Improvements</em></strong> from the Playbook of your Hunter.
-              </p>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-inline checkbox-inline">
-                      <input type="checkbox" id="level-improvment1b" name="level-improvment1b" value="improvment1" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment2b" name="level-improvment2b" value="improvment2" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment3b" name="level-improvment3b" value="improvment3" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment4b" name="level-improvment4b" value="improvment4" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment5b" name="level-improvment5b" value="improvment5" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="col-sm-2">
+                    <p>Experience:</p>
+                  </div>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" />
+                      <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option2" />
+                      <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option3" />
+                      <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option4" />
+                      <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option5" />
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="form-inline checkbox-inline">
-                      <input type="checkbox" id="level-improvment6b" name="level-improvment6b" value="improvment6" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment7b" name="level-improvment7b" value="improvment7" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment8b" name="level-improvment8b" value="improvment8" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment9b" name="level-improvment9b" value="improvment9" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea><br />
-                      <br />
-                      <input type="checkbox" id="level-improvment10b" name="level-improvment10b" value="improvment10" />
-                      <textarea id="level-imporvment" style="background-color: #ededed;"></textarea>
-                    </div>
+                </div>
+                <div class="col-sm-4">
+                  <textarea id="experience-total" name="weird-value" style="background-color: #ededed;"></textarea>
+                </div>
+              </div>
+            </div>
+            <p>
+              Fill out the fileds below with your <strong><em>Improvements</em></strong> from the Playbook of your Hunter.
+            </p>
+            <p>When you have filled all five experience boxes, you level up. Erase the marks and pick an improvement from the list below. Don't forget to update the <strong>Current Level</strong> field above.</p>
+            <p>After you have leveled up five times, you qualify for advanced improvements in addition to these.</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-inline checkbox-inline">
+                    <input type="checkbox" id="level-checkbox1" name="level-checkbox1" value="improvment1" />
+                    <textarea id="level-imporvment1" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox2" name="level-checkbox2" value="improvment2" />
+                    <textarea id="level-imporvment2" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox3" name="level-checkbox3" value="improvment3" />
+                    <textarea id="level-imporvment3" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox4" name="level-checkbox4" value="improvment4" />
+                    <textarea id="level-imporvment4" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox5" name="level-checkbox5" value="improvment5" />
+                    <textarea id="level-imporvment5" style="background-color: #ededed;"></textarea>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-inline checkbox-inline">
+                    <input type="checkbox" id="level-checkbox6" name="level-checkbox6" value="improvment6" />
+                    <textarea id="level-imporvment6" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox7" name="level-checkbox7" value="improvment7" />
+                    <textarea id="level-imporvment7" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox8" name="level-checkbox8" value="improvment8" />
+                    <textarea id="level-imporvment8" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox9" name="level-checkbox9" value="improvment9" />
+                    <textarea id="level-imporvment9" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox10" name="level-checkbox10" value="improvment10" />
+                    <textarea id="level-imporvment10" style="background-color: #ededed;"></textarea>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <hr />
-
-        <div class="container">
-          <h3>Mission</h3>
-          <textarea id="players_mission" style="background-color: #ededed;">Type your mission here</textarea>
-        </div>
-
-        <hr />
-
-        <div class="container">
-          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#moves">Moves</a></li>
-            <li><a data-toggle="tab" href="#weapons">Weapons</a></li>
-            <li><a data-toggle="tab" href="#inventory">Inventory</a></li>
-            <li><a data-toggle="tab" href="#history">History</a></li>
-            <li><a data-toggle="tab" href="#notes">Additional Notes</a></li>
-          </ul>
-
-          <div class="tab-content">
-            <div id="moves" class="tab-pane fade in active">
-              <h3>Moves</h3>
-              <p>You get all the basic moves, and pick three of your classes moves.</p>
-              <textarea id="players_mission-moves" style="background-color: #ededed;">Type your moves here</textarea>
-            </div>
-            <div id="weapons" class="tab-pane fade">
-              <h3>Weapons</h3>
-              <p>
-                List your weapons in the text field below. Enter each item on its own line. Try to follow formatting as:<br />
-                <code>weapon name, amount of harm, damage type</code>
-              </p>
-              <textarea id="players_mission-weapons" style="background-color: #ededed;">Type your weapons here</textarea>
-            </div>
-            <div id="inventory" class="tab-pane fade">
-              <h3>Inventory</h3>
-              <p>
-                List your items in the text field below. Enter each item on its own line. Try to follow formatting as:<br />
-                <code>item name x quantity</code></p>
-                <textarea id="players_mission-inventory" style="background-color: #ededed;">Type whats in your inventory here</textarea>
-              </div>
-              <div id="history" class="tab-pane fade">
-                <h3>History</h3>
-                <p>Go around the group again. When it's your turn, pick one for each of the other hunters:</p>
-                <table id="customers">
-                  <tr>
-                    <th>Hunter</th>
-                    <th>History</th>
-                    <th>Notes</th>
-                  </tr>
-                  <tr>
-                    <td><textarea id="players_history1a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-                    <td><textarea id="players_history1b" style="background-color: #ededed;">Type their history with you here</textarea></td>
-                    <td><textarea id="players_history1c" style="background-color: #ededed;">Type in their notes here</textarea></td>
-                  </tr>
-                  <tr>
-                    <td><textarea id="players_history2a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-                    <td><textarea id="players_history2b" style="background-color: #ededed;">Type their history with you here</textarea></td>
-                    <td><textarea id="players_history2c" style="background-color: #ededed;">Type in their notes here</textarea></td>
-                  </tr>
-                  <tr>
-                    <td><textarea id="players_history3a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-                    <td><textarea id="players_history3b" style="background-color: #ededed;">Type their history with you here</textarea></td>
-                    <td><textarea id="players_history3c" style="background-color: #ededed;">Type in their notes here</textarea></td>
-                  </tr>
-                  <tr>
-                    <td><textarea id="players_history4a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-                    <td><textarea id="players_history4b" style="background-color: #ededed;">Type their history with you here</textarea></td>
-                    <td><textarea id="players_history4c" style="background-color: #ededed;">Type in their notes here</textarea></td>
-                  </tr>
-                  <tr>
-                    <td><textarea id="players_history5a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-                    <td><textarea id="players_history5b" style="background-color: #ededed;">Type their history with you here</textarea></td>
-                    <td><textarea id="players_history5c" style="background-color: #ededed;">Type in their notes here</textarea></td>
-                  </tr>
-                  <tr>
-                    <td><textarea id="players_history6a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-                    <td><textarea id="players_history6b" style="background-color: #ededed;">Type their history with you here</textarea></td>
-                    <td><textarea id="players_history6c" style="background-color: #ededed;">Type in their notes here</textarea></td>
-                  </tr>
-                  <tr>
-                    <td><textarea id="players_history7a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
-                    <td><textarea id="players_history7b" style="background-color: #ededed;">Type their history with you here</textarea></td>
-                    <td><textarea id="players_history7c" style="background-color: #ededed;">Type in their notes here</textarea></td>
-                  </tr>
-                </table>
-
-              </div>
-              <div id="notes" class="tab-pane fade">
-                <h3>Additional Notes</h3>
-                <textarea id="players_mission-notes" style="background-color: #ededed;">Type your notes here</textarea>
+          <div id="advanced-leveling" class="tab-pane fade">
+            <h3>Advanced Leveling</h3>
+            <p>
+              Fill out the fileds below with your <strong><em>Advanced Improvements</em></strong> from the Playbook of your Hunter.
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-inline checkbox-inline">
+                    <input type="checkbox" id="level-checkbox1b" name="level-checkbox1b" value="improvment1" />
+                    <textarea id="level-imporvment1b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox2b" name="level-checkbox2b" value="improvment2" />
+                    <textarea id="level-imporvment2b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox3b" name="level-checkbox3b" value="improvment3" />
+                    <textarea id="level-imporvment3b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox4b" name="level-checkbox4b" value="improvment4" />
+                    <textarea id="level-imporvment4b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox5b" name="level-checkbox5b" value="improvment5" />
+                    <textarea id="level-imporvment5b" style="background-color: #ededed;"></textarea>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-inline checkbox-inline">
+                    <input type="checkbox" id="level-checkbox6b" name="level-checkbox6b" value="improvment6" />
+                    <textarea id="level-imporvment6b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox7b" name="level-checkbox7b" value="improvment7" />
+                    <textarea id="level-imporvment7b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox8b" name="level-checkbox8b" value="improvment8" />
+                    <textarea id="level-imporvment8b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox9b" name="level-checkbox9b" value="improvment9" />
+                    <textarea id="level-imporvment9b" style="background-color: #ededed;"></textarea><br />
+                    <br />
+                    <input type="checkbox" id="level-checkbox10b" name="level-checkbox10b" value="improvment10" />
+                    <textarea id="level-imporvment10b" style="background-color: #ededed;"></textarea>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <h3>Mission</h3>
+        <textarea id="players_mission" style="background-color: #ededed;">Type your mission here</textarea><br>
+      </div>
+
+      <hr />
+
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#moves">Moves</a></li>
+          <li><a data-toggle="tab" href="#weapons">Weapons</a></li>
+          <li><a data-toggle="tab" href="#inventory">Inventory</a></li>
+          <li><a data-toggle="tab" href="#history">History</a></li>
+          <li><a data-toggle="tab" href="#notes">Additional Notes</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="moves" class="tab-pane fade in active">
+            <h3>Moves</h3>
+            <p>You get all the basic moves, and pick three of your classes moves.</p>
+            <textarea id="moves1" style="background-color: #ededed;">Type your #1 move here</textarea>
+            <textarea id="moves2" style="background-color: #ededed;">Type your #2 move here</textarea>
+            <textarea id="moves3" style="background-color: #ededed;">Type your #3 move here</textarea>
+            <textarea id="moves4" style="background-color: #ededed;">Type your #4 move here</textarea>
+            <textarea id="moves5" style="background-color: #ededed;">Type your #5 move here</textarea>
+            <textarea id="moves6" style="background-color: #ededed;">Type your #6 move here</textarea>
+            <textarea id="moves7" style="background-color: #ededed;">Type your #7 move here</textarea>
+            <textarea id="moves8" style="background-color: #ededed;">Type your #8 move here</textarea>
+          </div>
+          <div id="weapons" class="tab-pane fade">
+            <h3>Weapons</h3>
+            <p>
+              List your weapons in the text fields below. Enter each item on its own line. Try to follow formatting as:<br />
+              <code>weapon name, amount of harm, damage type</code>
+            </p>
+            <textarea id="weapons1" style="background-color: #ededed;">Type a weapon name here</textarea>
+            <textarea id="weapons2" style="background-color: #ededed;">Type a weapon name here</textarea>
+            <textarea id="weapons3" style="background-color: #ededed;">Type a weapon name here</textarea>
+
+            <textarea id="weapons4" style="background-color: #ededed;">Type a weapon name here</textarea>
+            <textarea id="weapons5" style="background-color: #ededed;">Type a weapon name here</textarea>
+            <textarea id="weapons6" style="background-color: #ededed;">Type a weapon name here</textarea>
+
+            <textarea id="weapons7" style="background-color: #ededed;">Type a weapon name here</textarea>
+            <textarea id="weapons8" style="background-color: #ededed;">Type a weapon name here</textarea>
+            <textarea id="weapons9" style="background-color: #ededed;">Type a weapon name here</textarea>
+
+          </div>
+          <div id="inventory" class="tab-pane fade">
+            <h3>Inventory</h3>
+            <p>
+              List your items in the text field below. Enter each item on its own line. Try to follow formatting as:</p>
+              <table id="customers">
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Notes</th>
+                </tr>
+                <tr>
+                  <td><textarea id="item1a" style="background-color: #ededed;">Type the item name here</textarea></td>
+                  <td><textarea id="item1b" style="background-color: #ededed;">Enter the quantity</textarea></td>
+                  <td><textarea id="item1c" style="background-color: #ededed;">Place the item note here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="item2a" style="background-color: #ededed;">Type the item name here</textarea></td>
+                  <td><textarea id="item2b" style="background-color: #ededed;">Enter the quantity</textarea></td>
+                  <td><textarea id="item2c" style="background-color: #ededed;">Place the item note here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="item3a" style="background-color: #ededed;">Type the item name here</textarea></td>
+                  <td><textarea id="item3b" style="background-color: #ededed;">Enter the quantity</textarea></td>
+                  <td><textarea id="item3c" style="background-color: #ededed;">Place the item note here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="item4a" style="background-color: #ededed;">Type the item name here</textarea></td>
+                  <td><textarea id="item4b" style="background-color: #ededed;">Enter the quantity</textarea></td>
+                  <td><textarea id="item4c" style="background-color: #ededed;">Place the item note here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="item5a" style="background-color: #ededed;">Type the item name here</textarea></td>
+                  <td><textarea id="item5b" style="background-color: #ededed;">Enter the quantity</textarea></td>
+                  <td><textarea id="item5c" style="background-color: #ededed;">Place the item note here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="item6a" style="background-color: #ededed;">Type the item name here</textarea></td>
+                  <td><textarea id="item6b" style="background-color: #ededed;">Enter the quantity</textarea></td>
+                  <td><textarea id="item6c" style="background-color: #ededed;">Place the item note here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="item7a" style="background-color: #ededed;">Type the item name here</textarea></td>
+                  <td><textarea id="item7b" style="background-color: #ededed;">Enter the quantity</textarea></td>
+                  <td><textarea id="item7c" style="background-color: #ededed;">Place the item note here</textarea></td>
+                </tr>
+              </table>
+
+            </div>
+            <div id="history" class="tab-pane fade">
+              <h3>History</h3>
+              <p>Go around the group again. When it's your turn, pick one for each of the other hunters:</p>
+              <table id="customers">
+                <tr>
+                  <th>Hunter</th>
+                  <th>History</th>
+                  <th>Notes</th>
+                </tr>
+                <tr>
+                  <td><textarea id="players_history1a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+                  <td><textarea id="players_history1b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+                  <td><textarea id="players_history1c" style="background-color: #ededed;">Type in their notes here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="players_history2a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+                  <td><textarea id="players_history2b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+                  <td><textarea id="players_history2c" style="background-color: #ededed;">Type in their notes here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="players_history3a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+                  <td><textarea id="players_history3b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+                  <td><textarea id="players_history3c" style="background-color: #ededed;">Type in their notes here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="players_history4a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+                  <td><textarea id="players_history4b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+                  <td><textarea id="players_history4c" style="background-color: #ededed;">Type in their notes here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="players_history5a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+                  <td><textarea id="players_history5b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+                  <td><textarea id="players_history5c" style="background-color: #ededed;">Type in their notes here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="players_history6a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+                  <td><textarea id="players_history6b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+                  <td><textarea id="players_history6c" style="background-color: #ededed;">Type in their notes here</textarea></td>
+                </tr>
+                <tr>
+                  <td><textarea id="players_history7a" style="background-color: #ededed;">Type the Hunter's name here</textarea></td>
+                  <td><textarea id="players_history7b" style="background-color: #ededed;">Type their history with you here</textarea></td>
+                  <td><textarea id="players_history7c" style="background-color: #ededed;">Type in their notes here</textarea></td>
+                </tr>
+              </table>
+
+            </div>
+            <div id="notes" class="tab-pane fade">
+              <h3>Additional Notes</h3>
+              <textarea id="notes1" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes2" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes3" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes4" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes5" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes6" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes7" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes8" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes9" style="background-color: #ededed;">Type your notes here</textarea><br>
+              <textarea id="notes10" style="background-color: #ededed;">Type your notes here</textarea><br>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
 
 
-        <div>
-          <label for="file">Choose file to upload</label>
-          <input type="file" id="fileinput" accept=".txt"/>
-        </div><br/>
-        <button onclick="saveFormAsTextFile()"><strong>Save</strong></button>
 
-        <script>
-          (function () {
-            var input = document.getElementById("fileinput");
-            input.addEventListener("change", loadFile, false);
 
-            function loadFile() {
-              var file, fr;
+      <script>
+        (function () {
+          var input = document.getElementById("fileinput");
+          input.addEventListener("change", loadFile, false);
 
-              if (typeof window.FileReader !== "function") {
-                alert("The file API isn't supported on this browser yet.");
-                return;
-              }
+          function loadFile() {
+            var file, fr;
 
-              if (!input.files) {
-                alert("This browser doesn't seem to support the `files` property of file inputs.");
-              } else if (!input.files[0]) {
-                alert("Please select a file before clicking 'Load'");
-              } else {
-                file = input.files[0];
-                fr = new FileReader();
-                fr.onload = receivedText;
-                fr.readAsText(file);
-              }
-
-              function receivedText() {
-                var data = fr.result.split("\n");
-                document.getElementById("current-level").value = data[0];
-                document.getElementById("character_name").value = data[1];
-                document.getElementById("character_look").value = data[2];
-              }
+            if (typeof window.FileReader !== "function") {
+              alert("The file API isn't supported on this browser yet.");
+              return;
             }
-          })();
 
-          function saveFormAsTextFile() {
-            // Based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
-            var textToSave = document.getElementById("current-level").value + "\n" + document.getElementById("character_name").value + "\n" + document.getElementById("character_look").value;
+            if (!input.files) {
+              alert("This browser doesn't seem to support the `files` property of file inputs.");
+            } else if (!input.files[0]) {
+              alert("Please select a file before clicking 'Load'");
+            } else {
+              file = input.files[0];
+              fr = new FileReader();
+              fr.onload = receivedText;
+              fr.readAsText(file);
+            }
 
-            var textToSaveAsBlob = new Blob([textToSave], {
-              type: "text/plain",
-            });
-            var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-            var fileNameToSaveAs = document.getElementById("current-level").value;
+            function receivedText() {
+              var data = fr.result.split("\n");
+              document.getElementById("current-level").value = data[0];
+              document.getElementById("character_name").value = data[1];
+              document.getElementById("character_look").value = data[2];
+              document.getElementById("luck-total").value = data[3];
+              document.getElementById("harm-total").value = data[4];
+              document.getElementById("unstable-total").value = data[4];
+              document.getElementById("charm-value").value = data[5];
+              document.getElementById("cool-value").value = data[6];
+              document.getElementById("sharp-value").value = data[7];
+              document.getElementById("tough-value").value = data[8];
+              document.getElementById("weird-value").value = data[9];
+              document.getElementById("experience-total").value = data[10];
+              document.getElementById("level-imporvment1").value = data[11];
+              document.getElementById("level-imporvment2").value = data[12];
+              document.getElementById("level-imporvment3").value = data[13];
+              document.getElementById("level-imporvment4").value = data[14];
+              document.getElementById("level-imporvment5").value = data[15];
+              document.getElementById("level-imporvment6").value = data[16];
+              document.getElementById("level-imporvment7").value = data[17];
+              document.getElementById("level-imporvment8").value = data[18];
+              document.getElementById("level-imporvment9").value = data[19];
+              document.getElementById("level-imporvment10").value = data[20];
+              document.getElementById("level-imporvment1b").value = data[21];
+              document.getElementById("level-imporvment2b").value = data[22];
+              document.getElementById("level-imporvment3b").value = data[23];
+              document.getElementById("level-imporvment4b").value = data[24];
+              document.getElementById("level-imporvment5b").value = data[25];
+              document.getElementById("level-imporvment6b").value = data[26];
+              document.getElementById("level-imporvment7b").value = data[27];
+              document.getElementById("level-imporvment8b").value = data[28];
+              document.getElementById("level-imporvment9b").value = data[29];
+              document.getElementById("level-imporvment10b").value = data[30];
+              document.getElementById("players_mission").value = data[31];
+              document.getElementById("moves1").value = data[32];
+              document.getElementById("moves2").value = data[33];
+              document.getElementById("moves3").value = data[34];
+              document.getElementById("moves4").value = data[35];
+              document.getElementById("moves5").value = data[36];
+              document.getElementById("moves6").value = data[37];
+              document.getElementById("moves7").value = data[38];
+              document.getElementById("moves8").value = data[39];
+              document.getElementById("weapons1").value = data[40];
+              document.getElementById("weapons2").value = data[41];
+              document.getElementById("weapons3").value = data[42];
+              document.getElementById("weapons4").value = data[43];
+              document.getElementById("weapons5").value = data[44];
+              document.getElementById("weapons6").value = data[45];
+              document.getElementById("weapons7").value = data[46];
+              document.getElementById("weapons8").value = data[47];
+              document.getElementById("weapons9").value = data[48];
+              document.getElementById("item1a").value = data[49];
+              document.getElementById("item1b").value = data[50];
+              document.getElementById("item1c").value = data[51];
+              document.getElementById("item2a").value = data[52];
+              document.getElementById("item2b").value = data[53];
+              document.getElementById("item2c").value = data[54];
+              document.getElementById("item3a").value = data[55];
+              document.getElementById("item3b").value = data[56];
+              document.getElementById("item3c").value = data[57];
+              document.getElementById("item4a").value = data[58];
+              document.getElementById("item4b").value = data[59];
+              document.getElementById("item4c").value = data[60];
+              document.getElementById("item5a").value = data[61];
+              document.getElementById("item5b").value = data[62];
+              document.getElementById("item5c").value = data[63];
+              document.getElementById("item6a").value = data[64];
+              document.getElementById("item6v").value = data[65];
+              document.getElementById("item6c").value = data[66];
+              document.getElementById("item7a").value = data[67];
+              document.getElementById("item7b").value = data[68];
+              document.getElementById("item7c").value = data[69];
+              document.getElementById("item8a").value = data[70];
+              document.getElementById("item8b").value = data[71];
+              document.getElementById("item8c").value = data[72];
+              document.getElementById("item9a").value = data[73];
+              document.getElementById("item9b").value = data[74];
+              document.getElementById("item9c").value = data[75];
+              document.getElementById("players_history1a").value = data[76];
+              document.getElementById("players_history1b").value = data[77];
+              document.getElementById("players_history1c").value = data[78];
+              document.getElementById("players_history2a").value = data[79];
+              document.getElementById("players_history2b").value = data[80];
+              document.getElementById("players_history2c").value = data[81];
+              document.getElementById("players_history3a").value = data[82];
+              document.getElementById("players_history3b").value = data[83];
+              document.getElementById("players_history3c").value = data[84];
+              document.getElementById("players_history4a").value = data[85];
+              document.getElementById("players_history4b").value = data[86];
+              document.getElementById("players_history4c").value = data[87];
+              document.getElementById("players_history5a").value = data[88];
+              document.getElementById("players_history5b").value = data[89];
+              document.getElementById("players_history5c").value = data[90];
+              document.getElementById("players_history6a").value = data[91];
+              document.getElementById("players_history6v").value = data[92];
+              document.getElementById("players_history6c").value = data[93];
+              document.getElementById("players_history7a").value = data[94];
+              document.getElementById("players_history7b").value = data[95];
+              document.getElementById("players_history7c").value = data[96];
+              document.getElementById("players_history8a").value = data[97];
+              document.getElementById("players_history8b").value = data[98];
+              document.getElementById("players_history8c").value = data[99];
+              document.getElementById("players_history9a").value = data[100];
+              document.getElementById("players_history9b").value = data[101];
+              document.getElementById("players_history9c").value = data[102];
+              document.getElementById("notes1").value = data[103];
+              document.getElementById("notes2").value = data[104];
+              document.getElementById("notes3").value = data[105];
+              document.getElementById("notes4").value = data[106];
+              document.getElementById("notes5").value = data[107];
+              document.getElementById("notes6").value = data[108];
+              document.getElementById("notes7").value = data[109];
+              document.getElementById("notes8").value = data[110];
+              document.getElementById("notes9").value = data[111];
 
-            var downloadLink = document.createElement("a");
-            downloadLink.download = fileNameToSaveAs;
-            downloadLink.innerHTML = "Download File";
-            downloadLink.href = textToSaveAsURL;
-            downloadLink.onclick = destroyClickedElement;
-            downloadLink.style.display = "none";
-            document.body.appendChild(downloadLink);
-
-            downloadLink.click();
+            }
           }
+        })();
 
-          function destroyClickedElement(event) {
-            document.body.removeChild(event.target);
-          }
-        </script>
-      </form>
-    </body>
-    </html>
+        function saveFormAsTextFile() {
+          // Based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
+          var textToSave = document.getElementById("current-level").value + "\n" + document.getElementById("character_name").value + "\n" + document.getElementById("character_look").value; + "\n" + document.getElementById("luck-total").value; + "\n" + document.getElementById("harm-total").value;+ "\n" + document.getElementById("unstable-total").value; + "\n" + document.getElementById("charm-value").value; + "\n" + document.getElementById("cool-value").value; + "\n" + document.getElementById("sharp-value").value; + "\n" + document.getElementById("tough-value").value; + "\n" + document.getElementById("weird-value").value; + "\n" + document.getElementById("experience-total").value; + "\n" + document.getElementById("level-imporvment1").value; + "\n" + document.getElementById("level-imporvment2").value; + "\n" + document.getElementById("level-imporvment3").value; + "\n" + document.getElementById("level-imporvment4").value; + "\n" + document.getElementById("level-imporvment5").value; + "\n" + document.getElementById("level-imporvment6").value; + "\n" + document.getElementById("level-imporvment7").value; + "\n" + document.getElementById("level-imporvment8").value; + "\n" + document.getElementById("level-imporvment9").value; + "\n" + document.getElementById("level-imporvment10").value; + "\n" + document.getElementById("level-imporvment1b").value; + "\n" + document.getElementById("level-imporvment2b").value; + "\n" + document.getElementById("level-imporvment3b").value; + "\n" + document.getElementById("level-imporvment4b").value; + "\n" + document.getElementById("level-imporvment5b").value; + "\n" + document.getElementById("level-imporvment6b").value; + "\n" + document.getElementById("level-imporvment7b").value; + "\n" + document.getElementById("level-imporvment8b").value; + "\n" + document.getElementById("level-imporvment9b").value; + "\n" + document.getElementById("level-imporvment10b").value; + "\n" + document.getElementById("players_mission").value; + "\n" + document.getElementById("moves1").value;  + "\n" + document.getElementById("moves2").value; + "\n" + document.getElementById("moves3").value; + "\n" + document.getElementById("moves4").value; + "\n" + document.getElementById("moves5").value; + "\n" + document.getElementById("moves6").value; + "\n" + document.getElementById("moves7").value; + "\n" + document.getElementById("moves8").value; + "\n" + document.getElementById("weapons1").value + "\n" + document.getElementById("weapons2").value + "\n" + document.getElementById("weapons3").value + "\n" + document.getElementById("weapons4").value + "\n" + document.getElementById("weapons5").value + "\n" + document.getElementById("weapons6").value + "\n" + document.getElementById("weapons7").value + "\n" + document.getElementById("weapons8").value + "\n" + document.getElementById("weapons9").value+ "\n" + document.getElementById("items1a").value + "\n" + document.getElementById("items1b").value + "\n" + document.getElementById("items1c").value + "\n" + document.getElementById("items2a").value + "\n" + document.getElementById("items2b").value + "\n" + document.getElementById("items2c").value + "\n" + document.getElementById("items3a").value + "\n" + document.getElementById("items3b").value + "\n" + document.getElementById("items3c").value + "\n" + document.getElementById("items4a").value + "\n" + document.getElementById("items4b").value + "\n" + document.getElementById("items4c").value + "\n" + document.getElementById("items5a").value + "\n" + document.getElementById("items5b").value + "\n" + document.getElementById("items5c").value + "\n" + document.getElementById("items6a").value + "\n" + document.getElementById("items6b").value + "\n" + document.getElementById("items6c").value + "\n" + document.getElementById("items7a").value + "\n" + document.getElementById("items7b").value + "\n" + document.getElementById("items7c").value + "\n" + document.getElementById("items8a").value + "\n" + document.getElementById("items8b").value + "\n" + document.getElementById("items8c").value + "\n" + document.getElementById("items9a").value + "\n" + document.getElementById("items9b").value + "\n" + document.getElementById("items9c").value+ "\n" + document.getElementById("players_historys1a").value + "\n" + document.getElementById("players_historys1b").value + "\n" + document.getElementById("players_historys1c").value + "\n" + document.getElementById("players_historys2a").value + "\n" + document.getElementById("players_historys2b").value + "\n" + document.getElementById("players_historys2c").value + "\n" + document.getElementById("players_historys3a").value + "\n" + document.getElementById("players_historys3b").value + "\n" + document.getElementById("players_historys3c").value + "\n" + document.getElementById("players_historys4a").value + "\n" + document.getElementById("players_historys4b").value + "\n" + document.getElementById("players_historys4c").value + "\n" + document.getElementById("players_historys5a").value + "\n" + document.getElementById("players_historys5b").value + "\n" + document.getElementById("players_historys5c").value + "\n" + document.getElementById("players_historys6a").value + "\n" + document.getElementById("players_historys6b").value + "\n" + document.getElementById("players_historys6c").value + "\n" + document.getElementById("players_historys7a").value + "\n" + document.getElementById("players_historys7b").value + "\n" + document.getElementById("players_historys7c").value + "\n" + document.getElementById("players_historys8a").value + "\n" + document.getElementById("players_historys8b").value + "\n" + document.getElementById("players_historys8c").value + "\n" + document.getElementById("players_historys9a").value + "\n" + document.getElementById("players_historys9b").value + "\n" + document.getElementById("players_historys9c").value + "\n" + document.getElementById("notes1").value + "\n" + document.getElementById("notes2").value + "\n" + document.getElementById("notes3").value + "\n" + document.getElementById("notes4").value + "\n" + document.getElementById("notes5").value + "\n" + document.getElementById("notes6").value + "\n" + document.getElementById("notes7").value + "\n" + document.getElementById("notes8").value + "\n" + document.getElementById("notes9").value
+
+          var textToSaveAsBlob = new Blob([textToSave], {
+            type: "text/plain",
+          });
+          var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+          var fileNameToSaveAs = document.getElementById("current-level").value;
+
+          var downloadLink = document.createElement("a");
+          downloadLink.download = fileNameToSaveAs;
+          downloadLink.innerHTML = "Download File";
+          downloadLink.href = textToSaveAsURL;
+          downloadLink.onclick = destroyClickedElement;
+          downloadLink.style.display = "none";
+          document.body.appendChild(downloadLink);
+
+          downloadLink.click();
+        }
+
+        function destroyClickedElement(event) {
+          document.body.removeChild(event.target);
+        }
+      </script>
+    </form>
+  </body>
+  </html>
