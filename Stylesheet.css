@@ -1,29 +1,724 @@
-h4 {
-  padding: 10px;
+/* h4 {
+padding: 5px;
+} */
+
+textarea#current-level {
+  border: 1px;
+  /* margin-top: 5px; */
+  margin-left: 15px;
+  padding: 5px;
+  width: 100px;
+  resize: none;
 }
 
 textarea#character_name {
-    border: 1px;
-    padding: 10px;
-    width: 45.75%;
-    resize: vertical;
-    white-space: pre-wrap;
-    overflow: auto;
+  border: 1px;
+  padding: 5px;
+  width: 45.75%;
+  resize: vertical;
+  white-space: pre-wrap;
+  overflow: auto;
 }
 
 textarea#character_look {
-    border: 1px;
-    padding: 10px;
-    width: 45.75%;
-    resize: vertical;
-    overflow: auto;
+  border: 1px;
+  padding: 5px;
+  width: 45.75%;
+  resize: vertical;
+  overflow: auto;
 }
 
-textarea#current-level {
+textarea#luck-total {
+  border: 1px;
+  /* margin-top: 5px; */
+  /* margin-left: 15px; */
+  padding: 5px;
+  width: 100px;
+  resize: none;
+}
+
+textarea#harm-total {
+  border: 1px;
+  /* margin-top: 5px; */
+  /* margin-left: 15px; */
+  padding: 5px;
+  width: 200px;
+  resize: none;
+}
+
+textarea#unstable-total {
+  border: 1px;
+  /* margin-top: 5px; */
+  /* margin-left: 15px; */
+  padding: 5px;
+  width: 200px;
+  resize: none;
+}
+
+textarea#charm-value {
+  border: 1px;
+  padding: 5px;
+  height: 30px;
+  width: 50px;
+  resize: none;
+}
+
+textarea#cool-value {
+  border: 1px;
+  padding: 5px;
+  height: 30px;
+  width: 50px;
+  resize: none;
+}
+
+
+textarea#sharp-value {
+  border: 1px;
+  padding: 5px;
+  height: 30px;
+  width: 50px;
+  resize: none;
+}
+
+textarea#tough-value {
+  border: 1px;
+  padding: 5px;
+  height: 30px;
+  width: 50px;
+  resize: none;
+}
+
+textarea#weird-value {
+  border: 1px;
+  padding: 5px;
+  height: 30px;
+  width: 50px;
+  resize: none;
+}
+
+textarea#experience-total {
+  border: 1px;
+  /* margin-top: 5px; */
+  /* margin-left: 15px; */
+  padding: 5px;
+  width: 100px;
+  resize: none;
+}
+
+textarea#level-imporvment1 {
     border: 1px;
-    /* margin-top: 5px; */
-    margin-left: 15px;
-    padding: 5px;
-    width: 100px;
-    resize: none;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment2 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment3 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment4 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment5 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment6 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment7 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment8 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment9 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment10 {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+
+textarea#level-imporvment1b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment2b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment3b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment4b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment5b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment6b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment7b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment8b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment9b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#level-imporvment10b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_mission {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#moves1 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#moves2 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#moves3 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#moves4 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#moves5 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#moves6 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#moves7 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#moves8 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons1 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons2 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons3 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons4 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons5 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons6 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons7 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons8 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#weapons9 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+
+textarea#item1a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#item1b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item1c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item2a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item2b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item2c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item3a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item3b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item3c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item4a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item4b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item4c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item5a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item5b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item5c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item6a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item6b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item6c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item7a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#item7b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#item7c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history1a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history1b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history1c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history2c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history3c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history4c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history5c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history6c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history7a {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#players_history7b {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+textarea#players_history7c {
+    border: 1px;
+    padding: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+textarea#notes1 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes2 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes3 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes4 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes5 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes6 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes7 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes8 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes9 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+
+textarea#notes10 {
+    border: 1px;
+    padding: 10px;
+    width: 50%;
+    resize: vertical;
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5f7a91;
+  color: white;
 }
