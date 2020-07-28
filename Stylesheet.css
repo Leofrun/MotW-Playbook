@@ -373,261 +373,115 @@ textarea#weapons9 {
 }
 
 
-textarea#item1a {
+textarea#item1 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
 
-textarea#item1b {
+textarea#item2 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#item1c {
+textarea#item3 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#item2a {
+textarea#item4 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#item2b {
+textarea#item5 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#item2c {
+textarea#item6 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#item3a {
+textarea#item7 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#item3b {
+textarea#item8 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#item3c {
+textarea#item9 {
     border: 1px;
     padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item4a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item4b {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item4c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item5a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item5b {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item5c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item6a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item6b {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item6c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item7a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
 
-textarea#item7b {
+textarea#players_historys1 {
     border: 1px;
     padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#item7c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
 
-textarea#players_history1a {
+textarea#players_historys2 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-
-textarea#players_history1b {
+textarea#players_historys3 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#players_history1c {
+textarea#players_historys4 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#players_history2a {
+textarea#players_historys5 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#players_history2b {
+textarea#players_historys6 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#players_history2c {
+textarea#players_historys7 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#players_history3a {
+textarea#players_historys8 {
     border: 1px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
-textarea#players_history3b {
+textarea#players_historys9 {
     border: 1px;
     padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history3c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history4a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history4b {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history4c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history5a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history5b {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history5c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history6a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history6b {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history6c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history7a {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-
-textarea#players_history7b {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
-    resize: vertical;
-}
-textarea#players_history7c {
-    border: 1px;
-    padding: 10px;
-    width: 100%;
+    width: 50%;
     resize: vertical;
 }
 
@@ -699,26 +553,4 @@ textarea#notes10 {
     padding: 10px;
     width: 50%;
     resize: vertical;
-}
-#customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #5f7a91;
-  color: white;
 }
